@@ -12,8 +12,6 @@ $ docker build -t eagle .
 
 ## Running
 
-
-
 Make sure that you installed eagle somewhere, e.g. `/opt/eagle-6.6.0`
 
 ```sh

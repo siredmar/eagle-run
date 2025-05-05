@@ -12,11 +12,17 @@ $ docker build -t eagle .
 
 ## Running
 
+
+
 Make sure that you installed eagle somewhere, e.g. `/opt/eagle-6.6.0`
 
 ```sh
+# Allow X11 local connections
+$ xhost +local:docker
+# Set directories
 $ export EAGLE_INSTALLATION_PATH=/opt/eagle-6.6.0
 $ export EAGLE_PROJECTS=/home/user/projects
+# Run eagle withing the runtime
 $ docker run --rm -it -v ${EAGLE_INSTALLATION_PATH}:/app \
   -v ${EAGLE_PROJECTS}:/projects \
   -e DISPLAY=$DISPLAY \

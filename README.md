@@ -23,7 +23,8 @@ $ xhost +local:docker
 $ export EAGLE_INSTALLATION_PATH=/opt/eagle-6.6.0
 $ export EAGLE_PROJECTS=/home/user/projects
 # Run eagle withing the runtime
-$ docker run --rm -it -v ${EAGLE_INSTALLATION_PATH}:/app \
+$ docker run --rm -it \
+  -v ${EAGLE_INSTALLATION_PATH}:/app \
   -v ${EAGLE_PROJECTS}:/projects \
   -e DISPLAY=$DISPLAY \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
